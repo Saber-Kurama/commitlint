@@ -154,5 +154,91 @@ github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-co
 #### 项目级安装
 
 ```
-npm install -D commitizen
+npm install -D commitizen cz-conventional-changelog
 ```
+
+需要项目是Commitizen-friendly
+
+```
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
+```
+1. Installs the cz-conventional-changelog adapter npm module
+2. Saves it to package.json's dependencies or devDependencies
+3. Adds the config.commitizen key to the root of your package.json as shown here:
+```
+...
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+
+```
+Alternatively, commitizen configs may be added to a .czrc file:
+```
+{
+  "path": "cz-conventional-changelog"
+}
+
+```
+#### 全局安装
+
+```
+npm install -g commitizen cz-conventional-changelog
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+```
+全局模式下, 需要 ~/.czrc 配置文件, 为 commitizen 指定 Adapter.
+
+#### 自定义 Adapter
+
+可以通过指定 [Adapter cz-customizable](https://github.com/leoforfree/cz-customizable) 指定一套符合自己团队的规范.
+
+```
+npm i -g cz-customizable
+or
+npm i -D cz-customizable
+```
+修改 .czrc 或 package.json 中的 config 为:
+
+```
+{ "path": "cz-customizable" }
+or
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
+```
+也可以 cz-customizable不使用commitzen
+
+```
+"scripts" : {
+  ...
+  "commit": "./node_modules/cz-customizable/standalone.js"
+}
+```
+
+##### 配置的两种方式
+###### 添加到项目的仓库中
+* `cz-customizable` 首先查找项目根目录靠近 `package.json`的 `.cz-comfig.js` 或 `.config/cz-config.js`
+* 如果没有找到的话，会home主目录中的 `.cz-comfig.js` 或 `.config/cz-config.js`
+* 或者在 `package.json` 中
+```
+...
+"config": {
+  "commitizen": { // not needed for standlone usage
+    "path": "node_modules/cz-customizable"
+  },
+  "cz-customizable": {
+    "config": "config/path/to/my/config.js"
+  }
+}
+```
+最好是添加到项目的仓库中
+
+###### 不放大项目的仓库中
+
+* 在全局的.git中添加 `.cz-config.js` 
+* 在home主目录中 `.cz-config.js`
+
+
