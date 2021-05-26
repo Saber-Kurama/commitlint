@@ -1,0 +1,6 @@
+{
+    "name": "commitlint",
+    "version": "0.0.1",
+    "description": "代码提交规范",
+    "license": "ISC"
+}
