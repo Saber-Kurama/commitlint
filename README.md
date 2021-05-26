@@ -278,3 +278,35 @@ $ npm run prepare
 ```
 npx husky add .husky/pre-commit "npm test"
 ```
+
+#### changelog
+
+##### conventional-changelog-cli 
+
+```
+$ npm install -D conventional-changelog-cli
+```
+
+```
+conventional-changelog -p angular -i CHANGELOG.md -s
+```
+
+在 `package.json` 中
+
+```
+  {
+      "scripts": {
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+      }
+    }
+```
+Recommended workflow
+
+1. Make changes
+2. Commit those changes
+3. Make sure Travis turns green
+4. Bump version in package.json
+5. conventionalChangelog
+6. Commit package.json and CHANGELOG.md files
+7. Tag
+8. Push
