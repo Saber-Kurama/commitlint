@@ -242,3 +242,30 @@ or
 * 在home主目录中 `.cz-config.js`
 
 
+### commitlint校验
+
+```
+npm install -D @commitlint/cli @commitlint/config-conventional
+```
+配置
+
+```
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+```
+`.commitlintrc.js`
+
+```
+module.exports = {
+  extends: [
+    '@commitlint/config-conventional'
+  ],
+  rules: {
+  }
+};
+```
+
+#### 结合 Husky
+
+```
+
+```
