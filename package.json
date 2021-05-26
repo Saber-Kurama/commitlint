@@ -4,13 +4,16 @@
     "description": "代码提交规范",
     "license": "ISC",
     "scripts": {
-        "commit": "git-cz"
+        "commit": "git-cz",
+        "prepare": "husky install",
+        "test": ""
     },
     "devDependencies": {
         "@commitlint/cli": "^12.1.4",
         "@commitlint/config-conventional": "^12.1.4",
         "commitizen": "^4.2.4",
-        "cz-conventional-changelog": "^3.2.0"
+        "cz-conventional-changelog": "^3.2.0",
+        "husky": "^6.0.0"
     },
     "config": {
         "commitizen": {

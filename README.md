@@ -267,5 +267,14 @@ module.exports = {
 #### 结合 Husky
 
 ```
+npm install husky -D
+```
 
+```
+$ npm set-script prepare "husky install"
+$ npm run prepare
+```
+
+```
+npx husky add .husky/pre-commit "npm test"
 ```
