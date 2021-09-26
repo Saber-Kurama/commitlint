@@ -2,10 +2,16 @@
 
 ### 参考
 [commitizen + husky 规范git提交信息](https://juejin.cn/post/6844904025868271629)
+
 [GitGuide](https://zjdoc-gitguide.readthedocs.io/zh_CN/latest/)
+
 [git为不同的项目设置不同的用户名](https://www.jianshu.com/p/d3f80a1246d6)
+
 [关于 Git 提交这些规范，你都遵守了吗？](https://www.huaweicloud.com/articles/a6f73ba7bbde52c8d3bbda85f20164f7.html)
+
 [优雅的提交你的 Git Commit Message](https://zhuanlan.zhihu.com/p/34223150)
+
+[commit规范+commitlint+CHANGELOG自动生成一条龙服务](https://juejin.cn/post/6934292467160514567)
 ### gitconfig
 
 在项目中的`.git`目录中可以对 `config` 文件 进行配置
@@ -310,3 +316,23 @@ Recommended workflow
 6. Commit package.json and CHANGELOG.md files
 7. Tag
 8. Push
+
+##### standard-version
+
+
+[Git commit 常用表情快速查询] (https://blog.csdn.net/u011583927/article/details/104094284)
+
+:bug:
+
+
+### vscode 插件
+
+[让你的commit log因为emoji不再单调](https://juejin.cn/post/6844903950135590920) Gitmoji Commit
+
+[Individual emoji commit](https://github.com/fz6m/individual-emoji-commit/blob/HEAD/README-CN.md)
+
+[Git-commit-plugin For Vscode 一款自动生成规范git提交信息的插件](https://segmentfault.com/a/1190000021875143)
+
+todo
+commitlint 是不是可以更改message呢
+
